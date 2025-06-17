@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { SearchForm } from '@/components/SearchForm';
 import { DataTable } from '@/components/DataTable';
 import { StatusIndicator } from '@/components/StatusIndicator';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { FileExcel } from 'lucide-react';
+import { Download } from 'lucide-react';
 import { exportToExcel } from '@/utils/exportUtils';
 import { ScrapingData, SearchParams, ScrapingStatus } from '@/types/scraping';
 
@@ -111,7 +110,7 @@ const Index = () => {
                     onClick={handleExport}
                     className="bg-green-600 hover:bg-green-700"
                   >
-                    <FileExcel className="mr-2 h-4 w-4" />
+                    <Download className="mr-2 h-4 w-4" />
                     Export to Excel
                   </Button>
                 )}
